@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrivatePaw – Privacy Policy</title>
+  <style>
+    :root {
+      --accent: #ff7b2c;
+      --bg: #f9f9f9;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    header .paw { font-size: 2.4rem; }
+    header h1 { font-size: 1.5rem; font-weight: 700; margin-top: 4px; }
+    header p  { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+    .lang-switch {
+      display: flex; justify-content: center; gap: 12px;
+      padding: 16px 20px;
+    }
+    .lang-switch button {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 8px;
+      padding: 6px 18px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all .15s;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+    .section h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section p, .section li { font-size: 0.93rem; color: #374151; }
+    .section ul { padding-left: 1.4em; }
+    .section ul li { margin-top: 6px; }
+    .highlight {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #92400e;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding: 24px 20px;
+    }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="paw">🐾</div>
+  <h1>PrivatePaw</h1>
+  <p>Privacy Policy</p>
+</header>
+
+<div class="lang-switch">
+  <button class="active" onclick="setLang('en')">English</button>
+  <button onclick="setLang('ja')">日本語</button>
+</div>
+
+<main>
+
+<!-- ===== ENGLISH ===== -->
+<div data-lang="en" class="visible">
+
+  <div class="section">
+    <h2>📋 Overview</h2>
+    <p>PrivatePaw is a private pet monitoring app that streams video directly between two iPhones you own. This policy explains what data is handled and how.</p>
+    <p style="margin-top:10px;"><strong>Last updated:</strong> March 2026</p>
+  </div>
+
+  <div class="section">
+    <h2>🔒 What Data We Collect</h2>
+    <p><strong>We collect no personal information.</strong> No name, email address, account, or payment information is required to use PrivatePaw.</p>
+    <ul>
+      <li><strong>Device public key</strong> — A cryptographic public key is generated on your device and stored on our signaling server solely to authenticate your device. It is not linked to any personal identity.</li>
+      <li><strong>Session IDs</strong> — Temporary random IDs used to establish a live connection. These are automatically deleted when the session ends or expires.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📹 Camera & Microphone</h2>
+    <p>PrivatePaw accesses your camera and microphone only while you are actively streaming in Camera mode. Video and audio are transmitted exclusively between your two paired devices.</p>
+    <div class="highlight">
+      ⚠️ <strong>End-to-End Encrypted:</strong> All video and audio are encrypted on your device before transmission. Our server cannot see or hear your stream at any time.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🖥️ Our Server</h2>
+    <p>We operate a signaling server to help your devices find and connect to each other. The server:</p>
+    <ul>
+      <li>Does <strong>not</strong> store, record, or process any video or audio.</li>
+      <li>Stores only device public keys (for authentication) and temporary session IDs.</li>
+      <li>Uses TLS encryption for all connections.</li>
+    </ul>
+    <p style="margin-top:10px;">Video data travels peer-to-peer directly between your devices whenever possible. A TURN relay server may be used to assist connectivity in restricted network environments — this relay only passes encrypted data that the server cannot decrypt.</p>
+  </div>
+
+  <div class="section">
+    <h2>📱 Data Stored on Your Device</h2>
+    <ul>
+      <li>Cryptographic key pairs — stored securely in iOS Keychain.</li>
+      <li>Paired device information — stored locally using iOS Keychain and UserDefaults.</li>
+      <li>Language preference — stored in UserDefaults.</li>
+    </ul>
+    <p style="margin-top:10px;">All on-device data is removed when you delete the app.</p>
+  </div>
+
+  <div class="section">
+    <h2>🚫 What We Don't Do</h2>
+    <ul>
+      <li>We do not sell or share your data with third parties.</li>
+      <li>We do not use analytics, advertising SDKs, or crash-reporting tools.</li>
+      <li>We do not track your location.</li>
+      <li>We do not require account registration.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>👶 Children's Privacy</h2>
+    <p>PrivatePaw does not knowingly collect any data from children under 13. The app does not require any personal information from any user.</p>
+  </div>
+
+  <div class="section">
+    <h2>📬 Contact</h2>
+    <p>If you have any questions about this privacy policy, please contact us at:</p>
+    <p style="margin-top:8px;"><strong>GitHub:</strong> <a href="https://github.com/tetsulog/PrivatePaw" style="color:var(--accent);">github.com/tetsulog/PrivatePaw</a></p>
+  </div>
+
+</div><!-- /en -->
+
+<!-- ===== JAPANESE ===== -->
+<div data-lang="ja">
+
+  <div class="section">
+    <h2>📋 概要</h2>
+    <p>PrivatePaw は、お手持ちの2台のiPhone間で映像を直接ストリーミングするプライベートなペット見守りアプリです。このポリシーでは、取り扱うデータとその方法について説明します。</p>
+    <p style="margin-top:10px;"><strong>最終更新：</strong>2026年3月</p>
+  </div>
+
+  <div class="section">
+    <h2>🔒 収集するデータについて</h2>
+    <p><strong>個人情報は一切収集しません。</strong>PrivatePaw の利用に、氏名・メールアドレス・アカウント・支払い情報は不要です。</p>
+    <ul>
+      <li><strong>デバイス公開鍵</strong> — デバイス認証のためのみにシグナリングサーバーへ保存される暗号鍵です。個人の特定には使用されません。</li>
+      <li><strong>セッションID</strong> — 接続確立のための一時的なランダムIDです。セッション終了または期限切れで自動削除されます。</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📹 カメラ・マイクの使用</h2>
+    <p>カメラおよびマイクへのアクセスは、カメラモードで配信中のみ行われます。映像・音声はペアリングした2台のデバイス間のみで送受信されます。</p>
+    <div class="highlight">
+      ⚠️ <strong>エンドツーエンド暗号化：</strong>すべての映像・音声は送信前にデバイス上で暗号化されます。サーバーが映像や音声にアクセスすることはありません。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🖥️ サーバーについて</h2>
+    <p>デバイス間の接続を補助するためシグナリングサーバーを運用しています。このサーバーは：</p>
+    <ul>
+      <li>映像・音声を保存・録画・処理することは<strong>ありません</strong>。</li>
+      <li>デバイス公開鍵（認証用）と一時的なセッションIDのみを保存します。</li>
+      <li>全接続にTLS暗号化を使用します。</li>
+    </ul>
+    <p style="margin-top:10px;">映像データは可能な限りデバイス間でピアツーピア通信します。ネットワーク環境によってはTURNリレーサーバーが接続補助に使われますが、リレーするのはサーバーが復号できない暗号化済みデータのみです。</p>
+  </div>
+
+  <div class="section">
+    <h2>📱 デバイス上に保存されるデータ</h2>
+    <ul>
+      <li>暗号鍵ペア — iOS キーチェーンに安全に保存</li>
+      <li>ペアリング済みデバイス情報 — キーチェーン・UserDefaults にローカル保存</li>
+      <li>言語設定 — UserDefaults に保存</li>
+    </ul>
+    <p style="margin-top:10px;">アプリを削除すると、デバイス上のデータはすべて削除されます。</p>
+  </div>
+
+  <div class="section">
+    <h2>🚫 行わないこと</h2>
+    <ul>
+      <li>データを第三者に販売・提供しません。</li>
+      <li>アナリティクス・広告SDK・クラッシュレポートツールを使用しません。</li>
+      <li>位置情報のトラッキングは行いません。</li>
+      <li>アカウント登録は不要です。</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>👶 子どものプライバシー</h2>
+    <p>PrivatePaw は13歳未満の子どもから意図的にデータを収集しません。本アプリはいかなるユーザーからも個人情報を要求しません。</p>
+  </div>
+
+  <div class="section">
+    <h2>📬 お問い合わせ</h2>
+    <p>プライバシーポリシーに関するご質問は以下までご連絡ください：</p>
+    <p style="margin-top:8px;"><strong>GitHub：</strong> <a href="https://github.com/tetsulog/PrivatePaw" style="color:var(--accent);">github.com/tetsulog/PrivatePaw</a></p>
+  </div>
+
+</div><!-- /ja -->
+
+</main>
+
+<footer>
+  © 2026 PrivatePaw. All rights reserved.
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.trim().toLowerCase().startsWith(lang === 'en' ? 'e' : '日'));
+    });
+  }
+</script>
+
+</body>
+</html>
